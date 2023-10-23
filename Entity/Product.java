@@ -10,7 +10,6 @@ import org.springframework.lang.Nullable;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -36,6 +35,7 @@ public class Product {
     @ManyToMany(mappedBy = "products")
     @JsonBackReference
     private List<Order> orders;
+
 }
 
 

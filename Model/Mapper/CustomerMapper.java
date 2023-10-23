@@ -14,7 +14,7 @@ public class CustomerMapper {
         tmp.setFullname(customer.getFullname());
         tmp.setAddress(customer.getAddress());
         tmp.setPhone(customer.getPhone());
-        tmp.setUsername(customer.getAccount().getUser());
+        tmp.setUsername(customer.getAccount().getUsername());
         return tmp;
     }
 
@@ -36,7 +36,7 @@ public class CustomerMapper {
             tmp.setFullname(customer.getFullname());
             tmp.setAddress(customer.getAddress());
             tmp.setPhone(customer.getPhone());
-            tmp.setUsername(customer.getAccount().getUser());
+            tmp.setUsername(customer.getAccount().getUsername());
             list.add(tmp);
         }
         return list;

@@ -7,12 +7,14 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+
 public class AccountDTO {
     private int id;
     private String username;
     private String pass;
     private String email;
-    private String phanQuyen;
+    private String role;
+
 }

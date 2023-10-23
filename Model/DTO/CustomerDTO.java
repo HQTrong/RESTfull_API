@@ -7,12 +7,13 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class CustomerDTO {
     private int id;
     private String fullname;
     private String address;
     private String phone;
     private String username;
+
 }

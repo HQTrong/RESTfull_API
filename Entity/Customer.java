@@ -27,6 +27,5 @@ public class Customer {
     @JoinColumn(name = "username")
     private Account account;
 
-
 }
 

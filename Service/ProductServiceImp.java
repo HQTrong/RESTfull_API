@@ -2,21 +2,24 @@ package tmdt.tmdt_api.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
 import tmdt.tmdt_api.Entity.Product;
 import tmdt.tmdt_api.Model.DTO.ProductDTO;
 import tmdt.tmdt_api.Model.Mapper.ProductMapper;
 import tmdt.tmdt_api.Repository.ProductRepository;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 @Component
 public class ProductServiceImp implements ProductService {
+
     private ProductRepository dao;
     List<ProductDTO> listProduct = new ArrayList<>();
 
     @Autowired
-    public ProductServiceImp(ProductRepository thedao) {
+    public ProductServiceImp( ProductRepository thedao) {
         dao = thedao;
     }
 
@@ -73,4 +76,13 @@ public class ProductServiceImp implements ProductService {
         }
         return null;
     }
+    @Override
+    public ProductDTO addThumnail(String img,int id) {
+        var product = getProductByID(id);
+        product.setAnh(img);
+       Product pro= dao.save(ProductMapper.toProduct(product));
+        return ProductMapper.toProductDTO(pro);
+    }
+
+
 }

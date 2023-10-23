@@ -7,10 +7,11 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class CartDTO {
     private int idCart;
     private int idSanPham;
     private int idDonHang;
+
 }

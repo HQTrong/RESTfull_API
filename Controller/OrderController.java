@@ -30,9 +30,8 @@ public class OrderController {
 
     @PostMapping("")
     public ResponseEntity<?> addOrder(@RequestBody OrderDTO orderDTO) {
-        var item = orderDTO;
         OrderDTO order = orderService.save(orderDTO);
-        return ResponseEntity.ok(orderDTO);
+        return ResponseEntity.ok(order);
     }
 
 }

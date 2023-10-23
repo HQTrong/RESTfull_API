@@ -24,7 +24,7 @@ public class CommetMapper {
             tmp.setId(comment.getId());
             tmp.setPhone(comment.getPhone());
             tmp.setComment(comment.getComment());
-            tmp.setUsername(comment.getUsername().getUser());
+            tmp.setUsername(comment.getUsername().getUsername());
             list.add(tmp);
         }
         return list;

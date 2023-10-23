@@ -19,5 +19,6 @@ public class CategoryType {
     private int id;
     @Column(name = "loaisp")
     private String loaiSanPham;
+
 }
 

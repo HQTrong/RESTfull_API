@@ -47,7 +47,7 @@ public class ProductMapper {
             tmp.setId(product.getId());
             tmp.setTenSanPham(product.getTensp());
             tmp.setGiaSanPham(product.getGiasp());
-            tmp.setAnh(product.getAnh());
+            //tmp.setAnh(product.getAnh());
             tmp.setMoTa(product.getMota());
             tmp.setCategoryType(new CategoryType(product.getId_type(), null));
             list.add(tmp);
