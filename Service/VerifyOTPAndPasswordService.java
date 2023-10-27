@@ -1,6 +1,7 @@
 package tmdt.tmdt_api.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import tmdt.tmdt_api.Model.DTO.AccountDTO;
 import tmdt.tmdt_api.Model.DTO.PasswordAndOTPDTO;
@@ -23,7 +24,8 @@ public class VerifyOTPAndPasswordService {
             {
                 String status="Change Successfully";
                 accountDTO = accountService.getAccountByEmail(email);
-                accountDTO.setPass(passwordAndOTPDTO.getPassword());
+                accountDTO.setPass(BCrypt.hashpw(passwordAndOTPDTO.getPassword(),BCrypt.gensalt(10)));
+                accountService.changePassword(accountDTO);
                 return status;
             }
             else{

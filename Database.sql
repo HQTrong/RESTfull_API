@@ -14,6 +14,7 @@ create table account (
 	email varchar(50),
 	phanquyen varchar(20)
 );
+alter table account drop auth 
 create table cart(
 	id_cart serial primary key,
 	id_sanpham int,
@@ -63,3 +64,9 @@ values (5,'Bạc xỉu',25000,'Image/bacxiu.jpg','Bạc xỉu là món ăn có n
 	(12,'Sinh tố bơ',25000,'Image/daudaxay.jpg','Dâu đá xay là món đồ uống đáng trải nghiệm trong thời tiết oi ả của ngày hè. Bên cạnh hương vị hấp dẫn, loại thức uống này rất tốt cho những bạn dễ bị nóng trong người bởi dâu tây có công dụng thanh nhiệt và làm da trở nên hồng hào. Cũng giống như các loại đồ uống đá xay ở trên, công thức của dâu đá xay cũng không gây quá nhiều khó khăn cho người pha chế. Chỉ cần pha trộn sirup dâu, dâu tươi, sữa đặc, sữa tươi và xay nguyễn với đá là có thể tạo ra một thức uống giải nhiệt những cũng đầy hấp dẫn trong ngày hè.',3);
 insert into categorytype (id,loaisp)
 values (1,'Trà'),(2,'Cafe'),(3,'Sinh tố'),(4,'Nước ép');
+
+select * from account a 
+update account set phanquyen='User' where id =1
+insert into account(id,username,pass,email,phanquyen) values(2,'trong','12345','trong@gmail.com','admin');
+
+ALTER TABLE account  ALTER COLUMN pass TYPE varchar(100)

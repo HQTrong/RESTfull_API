@@ -45,4 +45,13 @@ public class AccountMapper {
         account.setRole("user");
         return account;
     }
+    public static Account toAccountSecurity(AccountDTO accountDTO) {
+        Account account = new Account();
+        account.setId(accountDTO.getId());
+        account.setUsername(accountDTO.getUsername());
+        account.setPass(accountDTO.getPass());
+        account.setEmail(accountDTO.getEmail());
+        account.setRole(accountDTO.getRole());
+        return account;
+    }
 }

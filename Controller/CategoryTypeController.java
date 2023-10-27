@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("categoryType")
+@RequestMapping("/categoryType")
 public class CategoryTypeController {
     List<CategoryTypeDTO> list = new ArrayList<>();
     @Autowired

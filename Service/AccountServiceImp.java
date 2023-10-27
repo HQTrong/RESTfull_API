@@ -41,4 +41,10 @@ public class AccountServiceImp implements AccountService {
         AccountDTO account = AccountMapper.toAccountDTO(dao.findAccountByUsername(username));
         return  account!= null? account : null;
     }
+
+    @Override
+    public AccountDTO changePassword(AccountDTO accountDTO) {
+        Account account = dao.save(AccountMapper.toAccount(accountDTO));
+        return account != null ? AccountMapper.toAccountDTO(account): null;
+    }
 }

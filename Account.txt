@@ -1,0 +1,2 @@
+user: trong, pass: trong, role: user
+user: hqtr, pass: hqtr, role: admin

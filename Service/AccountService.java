@@ -12,4 +12,5 @@ public interface AccountService {
     AccountDTO save(AccountDTO accountDTO);
     AccountDTO getAccountByEmail(String email);
     AccountDTO getAccountByUsername(String username);
+    AccountDTO changePassword(AccountDTO accountDTO);
 }

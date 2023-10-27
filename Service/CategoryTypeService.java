@@ -13,4 +13,5 @@ public interface CategoryTypeService {
     CategoryTypeDTO addCategoryType(CategoryTypeDTO categoryTypeDTO);
 
     CategoryTypeDTO update(CategoryTypeDTO categoryTypeDTO);
+
 }
