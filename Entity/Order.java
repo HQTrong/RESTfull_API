@@ -33,7 +33,7 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "id_customer")
     private Customer customer;
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST})
     @JoinTable(name = "cart",
             joinColumns = @JoinColumn(name = "id_donhang"),
             inverseJoinColumns = @JoinColumn(name = "id_sanpham"))
